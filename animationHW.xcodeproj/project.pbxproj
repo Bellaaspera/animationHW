@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		70AEFDDF289E5F4F0076E63E /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 70AEFDDE289E5F4F0076E63E /* SpringAnimation */; };
+		70AEFDE1289E6DAB0076E63E /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AEFDE0289E6DAB0076E63E /* Animation.swift */; };
+		70AEFDE3289E6ECF0076E63E /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70AEFDE2289E6ECF0076E63E /* DataStore.swift */; };
 		70F3A9B6289E5D9200833F93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3A9B5289E5D9200833F93 /* AppDelegate.swift */; };
 		70F3A9B8289E5D9200833F93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3A9B7289E5D9200833F93 /* SceneDelegate.swift */; };
 		70F3A9BA289E5D9200833F93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F3A9B9289E5D9200833F93 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70AEFDE0289E6DAB0076E63E /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		70AEFDE2289E6ECF0076E63E /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
 		70F3A9B2289E5D9200833F93 /* animationHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = animationHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F3A9B5289E5D9200833F93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		70F3A9B7289E5D9200833F93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 				70F3A9B5289E5D9200833F93 /* AppDelegate.swift */,
 				70F3A9B7289E5D9200833F93 /* SceneDelegate.swift */,
 				70F3A9B9289E5D9200833F93 /* ViewController.swift */,
+				70AEFDE0289E6DAB0076E63E /* Animation.swift */,
+				70AEFDE2289E6ECF0076E63E /* DataStore.swift */,
 				70F3A9BB289E5D9200833F93 /* Main.storyboard */,
 				70F3A9BE289E5D9900833F93 /* Assets.xcassets */,
 				70F3A9C0289E5D9900833F93 /* LaunchScreen.storyboard */,
@@ -148,6 +154,8 @@
 			files = (
 				70F3A9BA289E5D9200833F93 /* ViewController.swift in Sources */,
 				70F3A9B6289E5D9200833F93 /* AppDelegate.swift in Sources */,
+				70AEFDE1289E6DAB0076E63E /* Animation.swift in Sources */,
+				70AEFDE3289E6ECF0076E63E /* DataStore.swift in Sources */,
 				70F3A9B8289E5D9200833F93 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
