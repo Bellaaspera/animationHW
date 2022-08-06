@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         viewLabel.text = "preset: \(currentAnimations[counter].name.uppercased()) \ncurve: \(currentAnimations[counter].curve) \nforse: \(currentAnimations[counter].force) \nduration: \(currentAnimations[counter].duration) \ndelay: \(currentAnimations[counter].delay)"
-        print(currentAnimations.count)
+        
     }
 
     @IBAction func buttonPressed(_ sender: SpringButton) {

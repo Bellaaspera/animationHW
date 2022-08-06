@@ -25,7 +25,7 @@ struct Animation {
             animations.append(
                 Animation(
                     name: AnimationPreset.allCases.shuffled()[index].rawValue,
-                    curve: AnimationCurve.allCases.shuffled()[index].rawValue,
+                    curve: AnimationCurve.allCases.shuffled()[Int.random(in: 0..<AnimationCurve.allCases.count)].rawValue,
                     force: Float.random(in: 0.2...2.0),
                     duration: Float.random(in: 0.2...2.0),
                     delay: Float.random(in: 0.2...1.0)
