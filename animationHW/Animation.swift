@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SpringAnimation
 
 struct Animation {
     let name: String
@@ -15,18 +16,20 @@ struct Animation {
     let delay: Float
     
     static func getAnimations() -> [Animation] {
+        
         var animations: [Animation] = []
-        let animationType = AnimationType()
-        let index = min(animationType.name.count, animationType.curve.count)
-        for _ in 0...index {
+        
+        let maxIndex = min(AnimationPreset.allCases.count - 1, AnimationCurve.allCases.count - 1)
+        
+        for index in 0...maxIndex {
             animations.append(
                 Animation(
-                name: animationType.name.shuffled()[Int.random(in: 0..<animationType.name.count)],
-                curve: animationType.curve.shuffled()[Int.random(in: 0..<animationType.name.count)],
-                force: Float.random(in: 0.2...1.0),
-                duration: Float.random(in: 0.2...2.0),
-                delay: Float.random(in: 0.2...1.0)
-            )
+                    name: AnimationPreset.allCases.shuffled()[index].rawValue,
+                    curve: AnimationCurve.allCases.shuffled()[index].rawValue,
+                    force: Float.random(in: 0.2...2.0),
+                    duration: Float.random(in: 0.2...2.0),
+                    delay: Float.random(in: 0.2...1.0)
+                )
             )
         }
         return animations
