@@ -15,11 +15,8 @@ struct Animation {
     let delay: Float
     
     static func getAnimations() -> [Animation] {
-        
         var animations: [Animation] = []
-        
         let maxIndex = min(AnimationPreset.allCases.count - 1, AnimationCurve.allCases.count - 1)
-        
         for index in 0...maxIndex {
             animations.append(
                 Animation(

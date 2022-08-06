@@ -19,36 +19,32 @@ class ViewController: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        viewLabel.text = "preset: \(currentAnimations[counter].name.uppercased()) \ncurve: \(currentAnimations[counter].curve) \nforse: \(getFormatedValue(currentAnimations[counter].force)) \nduration: \(getFormatedValue(currentAnimations[counter].duration)) \ndelay: \(getFormatedValue(currentAnimations[counter].delay))"
-        
+        viewLabel.text = setLabelText(currentAnimations[counter])
     }
 
     @IBAction func buttonPressed(_ sender: SpringButton) {
         
         if counter < currentAnimations.count - 1 {
-            
             setCurrentAnimation()
-            
             counter += 1
             mainView.reloadInputViews()
             sender.setTitle("Show \(currentAnimations[counter].name.uppercased())", for: .normal)
-            
         } else {
             counter = 0
-            
             setCurrentAnimation()
-            
             counter += 1
             mainView.reloadInputViews()
             sender.setTitle("Show \(currentAnimations[counter].name.uppercased())", for: .normal)
         }
     }
+}
+
+extension ViewController {
     
     private func setCurrentAnimation() {
         let animation = currentAnimations[counter]
         button.setTitle("\(animation.name.uppercased())", for: .normal)
-        viewLabel.text = "preset: \(animation.name.uppercased()) \ncurve: \(animation.curve) \nforse: \(getFormatedValue(animation.force)) \nduration: \(getFormatedValue(animation.duration)) \ndelay: \(getFormatedValue(animation.delay))"
+        viewLabel.text = setLabelText(animation)
         mainView.animation = animation.name
         mainView.curve = animation.curve
         mainView.force = CGFloat(animation.force)
@@ -58,7 +54,11 @@ class ViewController: UIViewController {
     }
     
     private func getFormatedValue(_ value: Float) -> String {
-        String(format: "%.2f",value)
+        String(format: "%.2f", value)
+    }
+    
+    private func setLabelText(_ animation: Animation) -> String {
+        "preset: \(animation.name.uppercased()) \ncurve: \(animation.curve) \nforse: \(getFormatedValue(animation.force)) \nduration: \(getFormatedValue(animation.duration)) \ndelay: \(getFormatedValue(animation.delay))"
     }
 }
 
