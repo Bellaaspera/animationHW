@@ -5,7 +5,6 @@
 //  Created by Светлана Сенаторова on 06.08.2022.
 //
 
-import Foundation
 import SpringAnimation
 
 struct Animation {
@@ -25,9 +24,9 @@ struct Animation {
             animations.append(
                 Animation(
                     name: AnimationPreset.allCases.shuffled()[index].rawValue,
-                    curve: AnimationCurve.allCases.shuffled()[Int.random(in: 0..<AnimationCurve.allCases.count)].rawValue,
-                    force: Float.random(in: 0.2...2.0),
-                    duration: Float.random(in: 0.2...2.0),
+                    curve: AnimationCurve.allCases[Int.random(in: 0..<AnimationCurve.allCases.count)].rawValue,
+                    force: Float.random(in: 0.3...2.0),
+                    duration: Float.random(in: 0.3...2.0),
                     delay: Float.random(in: 0.2...1.0)
                 )
             )

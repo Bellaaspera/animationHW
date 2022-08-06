@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        viewLabel.text = "preset: \(currentAnimations[counter].name.uppercased()) \ncurve: \(currentAnimations[counter].curve) \nforse: \(currentAnimations[counter].force) \nduration: \(currentAnimations[counter].duration) \ndelay: \(currentAnimations[counter].delay)"
+        viewLabel.text = "preset: \(currentAnimations[counter].name.uppercased()) \ncurve: \(currentAnimations[counter].curve) \nforse: \(getFormatedValue(currentAnimations[counter].force)) \nduration: \(getFormatedValue(currentAnimations[counter].duration)) \ndelay: \(getFormatedValue(currentAnimations[counter].delay))"
         
     }
 
@@ -48,13 +48,17 @@ class ViewController: UIViewController {
     private func setCurrentAnimation() {
         let animation = currentAnimations[counter]
         button.setTitle("\(animation.name.uppercased())", for: .normal)
-        viewLabel.text = "preset: \(animation.name.uppercased()) \ncurve: \(animation.curve) \nforse: \(String(format: "%.2f",animation.force)) \nduration: \(String(format: "%.2f",animation.duration)) \ndelay: \(String(format:"%.2f", animation.delay))"
+        viewLabel.text = "preset: \(animation.name.uppercased()) \ncurve: \(animation.curve) \nforse: \(getFormatedValue(animation.force)) \nduration: \(getFormatedValue(animation.duration)) \ndelay: \(getFormatedValue(animation.delay))"
         mainView.animation = animation.name
         mainView.curve = animation.curve
         mainView.force = CGFloat(animation.force)
         mainView.duration = CGFloat(animation.duration)
         mainView.delay = CGFloat(animation.delay)
         mainView.animate()
+    }
+    
+    private func getFormatedValue(_ value: Float) -> String {
+        String(format: "%.2f",value)
     }
 }
 
